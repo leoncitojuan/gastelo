@@ -184,10 +184,10 @@
                                                         <input  class="form-control"  type="file" name="txtModificarImagen" id="txtModificarImagen" size="30"  />
                                                     </div>
                                                   
-                                                </div>
-                                      <input type="button" name="btnCancelar" id="btnCancelar" class="button" value="Cancelar">
-                        <input type="button" name="btnGuardar" id="btnGuardar" class="button" value="Guardar">
-                        <input type="hidden" name="accion" value="actualizar">
+                                                </div>  
+                                                <button type="button"  name="btnCancelar" class="btn btn-danger waves-light waves-effect button" id="btnCancelar">Cancelar</button>
+                                        <button type="button" name="btnGuardar" id="btnGuardar" class="button btn btn-success waves-light waves-effect">Guardar</button>
+                                        <input type="hidden" name="accion" value="actualizar">
                                         </form>
                                     </div>
                                 </div>

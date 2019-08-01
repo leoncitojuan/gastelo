@@ -9,8 +9,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="js/RegistrarVenta.js"></script>
-        <link type="text/css" rel="stylesheet" href="css/css1.css" />
-                <!-- App favicon -->
+                    <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
       
         <!-- App css -->
@@ -126,7 +125,7 @@
       <div class="card-box">
         <form action="Servlet_Venta" method="post" id="frmRegistrarVenta">
             <br>
-            <table id="tablaRegistrarVenta">
+            <table class="table" id="tablaRegistrarVenta">
                 <tr>
                     <th colspan="7" class="TituloDV">
                         <h3>CARRITO DE COMPRAS</h3>
@@ -209,7 +208,10 @@
                                     <input type="hidden" name="subTotalProd" value="<%=dv.getSubTotal()%>">
                                 </td> 
                                 <td whidh="100" class="Opcion">
-                                    <input type="button" name="btnEliminar" id="btnEliminar" class="button" value="Eliminar" onclick="location.href='Servlet_Venta?numero=<%=dv.getNumero() %>&&accion=quitar'">
+                                    <button type="button" class="btn btn-danger waves-light waves-effect"
+                                            name="btnEliminar" id="btnEliminar"
+                                            onclick="location.href='Servlet_Venta?numero=<%=dv.getNumero() %>&&accion=quitar'"
+                                            >Eliminar</button>
                                 </td>
                             </tr>
                             <%
@@ -243,7 +245,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="button" name="btnRegistrar" id="btnRegistrarVenta" class="button" value="Registrar compra">
+                        <button class="btn btn-success waves-light waves-effect" name="btnRegistrar"
+                                            id="btnRegistrarVenta" >Registrar compra</button>
+                                     
                     </td>
                 </tr>
                 <tr>

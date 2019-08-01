@@ -157,50 +157,29 @@
                <div class="row">
                     <div class="col-12">
                         <div class="card-box">
-  
-        <form action="Servlet_MP" method="post" name="frm" id="frmModificarMP">
-            <table id="tablaModificarMP">
-                <tr>
-                    <th colspan="2">
-                        <h1> Modificar MP </h1>
-                    </th>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="hidden" name="txtCodigo" value="<%=codigo %>">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Codigo :
-                    </td>
-                    <td>
-                        <dd> <%=codigo %> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Marca producto :
-                    </td>
-                    <td>
-                        <dd> <input type="text" name="txtNombre" id="txtNombre" value="<%=nombre %>"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="Botones">
-                        <br>
-                        <input type="button" name="btnCancelar" id="btnCancelar" class="button" value="Cancelar">
-                        <input type="button" name="btnGuardar" id="btnGuardar" class="button" value="Guardar">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <br>
-                    </td>
-                </tr>
-            </table>
-                    <input type="hidden" name="accion" value="actualizar">
-        </form>
+                            <form action="Servlet_MP" method="post" name="frm" id="frmModificarMP">
+                                <div class="form-group row">
+                                                <label class="col-2 col-form-label">Codigo :</label>
+                                                <div class="col-10">
+                                                    <input type="text" class="form-control" value=" <%=codigo %>"
+                                                           name="txtCodigo" value="<%=codigo %>"
+                                                    readonly="readonly">
+                                                </div>
+                                </div>
+                               <div class="form-group row">
+                                                <label class="col-2 col-form-label">  Marca producto :</label>
+                                                <div class="col-10">
+                                                    <input type="text" class="form-control" 
+                                                     name="txtNombre" id="txtNombre" value="<%=nombre %>">
+                                                </div>
+                                </div>
+                                <button type="button" class="btn btn-success waves-light waves-effect"
+                                        type="button" name="btnGuardar" id="btnGuardar">Guardar</button>
+                                <button type="button" class="btn btn-danger waves-light waves-effect"
+                                        name="btnCancelar" id="btnCancelar" class="button" >Cancelar</button>
+                                             <input type="hidden" name="accion" value="actualizar" />
+                            </form>
+
                             <!-- end row -->
                         </div> <!-- end card-box -->
                     </div><!-- end col -->

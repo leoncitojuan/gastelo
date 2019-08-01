@@ -148,8 +148,9 @@
         <hr>
         
         <form id="frmMostrarCuerpoUsuario">
-            <table id="tablaMostrarCuerpoUsuario">
-                <tr>
+            <table class="table" id="tablaMostrarCuerpoUsuario">
+                <thead>
+  <tr>
                     <th class="Titulo">
                         CODIGO
                     </th>
@@ -181,8 +182,9 @@
                         OPCION
                     </th>
                 </tr>    
-                
-                <%
+                </thead>
+                <tbody>
+   <%
                     ArrayList<Usuario> lista = Usuario_DB.MostrarUsuarioHabilitado();
                     for(int i=0; i<lista.size(); i++){
                         usu = lista.get(i);
@@ -227,6 +229,8 @@
                 <%
                     }
                 %>
+                </tbody>
+             
 
             </table>
         </form>

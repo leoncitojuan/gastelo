@@ -133,7 +133,8 @@
 
         <form id="frmMostrarCabeceraUsuarioEliminados">
             <table class="table" id="tablaMostrarCabeceraUsuarioEliminados">
-                <tr>
+                <thead>
+          <tr>
                     <th>
                         <h1> Usuarios eliminados </h1>
                     </th>
@@ -149,7 +150,7 @@
         <hr>    
         
         <form id="frmMostrarCuerpoUsuarioEliminados">
-            <table id="tablaMostrarCuerpoUsuarioEliminados">
+            <table class="table" id="tablaMostrarCuerpoUsuarioEliminados">
                 <tr>
                     <th class="Titulo">
                         CODIGO
@@ -182,7 +183,9 @@
                         OPCION
                     </th>
                 </tr>
-                
+                </thead>
+                <tbody>
+  
                 <%
                     ArrayList<Usuario> lista = Usuario_DB.MostrarUsuarioInhabilitado();
                     for(int i=0; i<lista.size(); i++){
@@ -218,13 +221,17 @@
                         <%=usu.getEstadoUsuario()%>
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnRecuperar" id="btnRecuperar" class="button" value="Recuperar" onclick="location.href='Servlet_Usu?codigoU=<%=usu.getCodigoUsuario() %>&&accion=recuperar'">
-                    </td>
+                        <button type="button" name="btnRecuperar" 
+                               id="btnRecuperar" 
+                               class="btn btn-secondary waves-light waves-effect"
+                                onclick="location.href='Servlet_Usu?codigoU=<%=usu.getCodigoUsuario() %>&&accion=recuperar'">Recuperar</button>
+                           </td>
                 </tr>
                 
                 <%
                     }
                 %>
+                </tbody>
             </table>
         </form> 
                             <!-- end row -->

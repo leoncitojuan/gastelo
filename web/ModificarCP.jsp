@@ -139,7 +139,6 @@
 
         <form  class="card-box" action="Servlet_CP" method="post" name="frm" id="frmModificarCP">
              <div class="card-box">
-
             <table id="tablaModificarCP" class="table"  >
                 <tr>
                     <th colspan="2">
@@ -170,8 +169,11 @@
                 <tr>
                     <td colspan="2" class="Botones">
                         <br>
-                        <input type="button" name="btnCancelar" id="btnCancelar" class="button" value="Cancelar">
-                        <input type="button" name="btnGuardar" id="btnGuardar" class="button" value="Guardar">
+                        <button type="button" class="btn btn-danger waves-light waves-effect"
+                                name="btnCancelar" id="btnCancelar"
+                                >Cancelar</button>
+                      <button type="button" class="btn btn-success waves-light waves-effect"
+                              name="btnGuardar" id="btnGuardar" >Guardar</button>
                     </td>
                 </tr>
                 <tr>
@@ -188,31 +190,8 @@
                         </div> <!-- end card-box -->
                     </div><!-- end col -->
                 </div>
-                <!-- end row -->
-
-                <!-- end row -->
-
-                <!-- end row -->
-
-                <!-- end row -->
-
-
-           
-
-
-
-
-
-
-
-                <!-- end row -->
-
             </div> <!-- end container -->
         </div>
-        <!-- end wrapper -->
-
-
-        <!-- Footer -->
         <footer class="footer">
             <div class="container">
                 <div class="row">
@@ -222,11 +201,6 @@
                 </div>
             </div>
         </footer>
-        <!-- End Footer -->
-
-
-        <!-- jQuery  -->
-
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/waves.js"></script>

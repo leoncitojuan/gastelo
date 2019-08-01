@@ -146,8 +146,9 @@
         <hr>
         
         <form id="frmMostrarCuerpoProd">
-            <table id="tablaMostrarCuerpoProd">
-                <tr>
+            <table class="table" id="tablaMostrarCuerpoProd">
+                <thead>
+                    <tr>
                     <th class="Titulo">
                         CODIGO
                     </th>
@@ -173,6 +174,7 @@
                         OPCION
                     </th>
                 </tr>
+                </thead>
                 
                 <%
                     ArrayList<Producto> lista = Producto_DB.obtenerProductosHabilitados();

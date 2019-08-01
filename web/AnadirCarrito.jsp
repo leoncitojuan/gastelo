@@ -135,60 +135,41 @@
        <%
          cliente = request.getParameter("cliente");
         Producto p = Producto_DB.listarProductoPorCodigo(request.getParameter("codigoP"));
-    %>                       
-                             <form name="frm" action="Servlet_Prod" method="post" id="frmAnadirCarrito">
-            <input type="hidden" name="txtCliente" value="<%=cliente %>">
-            <table id="tablaAnadirCarrito">
-                <tr>
-                    <th colspan="2">
-                        <h1>Añadir a carrito</h1>
-                    </th>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <dd> <input type="hidden" name="txtCodigo" value="<%=p.getCodigoP() %>" size="20" maxlength="30"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Nombre producto :
-                    </td>
-                    <td>
-                        <dd> <input type="text" name="txtNombreP" class="campoNoEditable" value="<%=p.getClaseProducto() %> <%=p.getMarcaProducto() %> - <%=p.getDescripcion() %>" 
-                               size="60" readonly="readonly"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Precio producto :
-                    </td>
-                    <td>
-                        <dd> <input type="text" name="txtPrecio" class="campoNoEditable" value="<%=p.getPrecioP() %>" size="20" maxlength="30" readonly="readonly"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Cantidad :
-                    </td>
-                    <td>
-                        <dd> <input type="number" name="txtCantidad" value="1" min="1"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="Botones">
-                        <br>
-                        <input type="button" name="btnCancelar" id="btnCancelar" class="button" value="Cancelar">
-                        <input type="submit" name="btnGuardar" id="btnGuardar" class="button" value="ADD carrito">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <br>
-                    </td>
-                </tr>
-            </table>
-                    <input type="hidden" name="accion" value="anadirCarrito">
-        </form>       
+    %> 
+    <form name="frm" action="Servlet_Prod" method="post" id="frmAnadirCarrito">
+        <input type="hidden" name="txtCliente" value="<%=cliente %>">
+        <h1>Añadir a carrito</h1>
+        <dd> <input type="hidden" name="txtCodigo" value="<%=p.getCodigoP() %>" size="20" maxlength="30"> </dd>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Nombre producto :</label>
+                <div class="col-10">
+                    <input type="text" class="form-control campoNoEditable" 
+                     name="txtNombreP"  value="<%=p.getClaseProducto() %> <%=p.getMarcaProducto() %> - <%=p.getDescripcion() %>" 
+                               size="60" readonly="readonly"/>
+                </div>
+            </div>
+         <div class="form-group row">
+                <label class="col-2 col-form-label">Precio producto :</label>
+                <div class="col-10">
+                    <input type="text" class="form-control campoNoEditable" 
+                     name="txtPrecio"  
+                                    value="<%=p.getPrecioP() %>" size="20" maxlength="30" readonly="readonly"/>
+                </div>
+            </div>
+        <div class="form-group row">
+                <label class="col-2 col-form-label">Cantidad :</label>
+                <div class="col-10">
+                    <input type="text" class="form-control campoNoEditable" 
+                     type="number" name="txtCantidad" value="1" min="1"/>
+                </div>
+            </div>
+        <button type="button" class="btn btn-danger waves-light waves-effect"
+                 name="btnCancelar" id="btnCancelar" >Cancelar</button>
+       <button type="submit" name="btnGuardar" id="btnGuardar" 
+               class="btn btn-success waves-light waves- button">ADD carrito</button>          
+    <input type="hidden" name="accion" value="anadirCarrito">
+    </form>
+      
                             <!-- end row -->
                         </div> <!-- end card-box -->
                     </div><!-- end col -->

@@ -114,13 +114,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="page-title-box">
-                            <div class="btn-group pull-right">
-                                <ol class="breadcrumb hide-phone p-0 m-0">
-                                    <li class="breadcrumb-item"><a href="#">Highdmin</a></li>
-                                    <li class="breadcrumb-item"><a href="#">UI Kit</a></li>
-                                    <li class="breadcrumb-item active">Cards</li>
-                                </ol>
-                            </div>
+                            
                             <h4 class="page-title"> <h4>
                                       
                                                  <td colspan="5">
@@ -135,45 +129,26 @@
                <div class="row">
                     <div class="col-12">
                         <div class="card-box">
-
-        <form name="frm" action="Servlet_MP" method="post" id="frmRegistrarMP">
-            <table id="tablaRegistrarMP">
-                <tr>
-                    <th colspan="2">
-                        <h1>Registrar marca producto</h1>
-                    </th>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Codigo :
-                    </td>
-                    <td>
-                        <dd> <input type="text" name="txtCodigo" value="<%=Codigo_MP %>" readonly="readonly">  </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Marca producto :
-                    </td>
-                    <td>
-                        <dd> <input type="text" name="txtNombre" id="txtNombre" class="textBox"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="Botones">
-                        <br>
-                        <input type="button" name="btnCancelar" id="btnCancelar" class="button" value="Cancelar"> 
-                        <input type="button" name="btnRegistrar" id="btnRegistrar" class="button" value="Registrar"> 
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <br>
-                    </td>
-                </tr>
-            </table>
-                    <input type="hidden" name="accion" value="insertar">
-        </form>
+                            <form name="frm" action="Servlet_MP" method="post" id="frmRegistrarMP">
+                                <div class="form-group row">
+                                    <label class="col-2 col-form-label">Codigo :</label>
+                                    <div class="col-10">
+                                        <input type="text" class="form-control" name="txtCodigo" 
+                                               value="<%=Codigo_MP %>" readonly="readonly"/>
+                                    </div>
+                                </div>
+                                 <div class="form-group row">
+                                    <label class="col-2 col-form-label">  Marca producto :</label>
+                                    <div class="col-10">
+                                        <input type="text" class="form-control" 
+                                        name="txtNombre" id="txtNombre" 
+                                        />
+                                    </div>
+                                </div>
+                                <button type="button" name="btnCancelar" id="btnCancelar" class="btn btn-danger waves-light waves-effect">Cancelar</button>
+                                <button type="button" name="btnRegistrar" id="btnRegistrar" class="btn btn-success waves-light waves-effect">Registrar</button>
+                              <input type="hidden" name="accion" value="insertar">
+                            </form>
                             <!-- end row -->
                         </div> <!-- end card-box -->
                     </div><!-- end col -->

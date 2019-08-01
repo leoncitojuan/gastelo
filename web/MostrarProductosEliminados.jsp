@@ -148,8 +148,9 @@
         <hr>
         
         <form id="frmMostrarCuerpoProdEliminados">
-            <table id="tablaMostrarCuerpoProdEliminados">
-                <tr>
+            <table class="table" id="tablaMostrarCuerpoProdEliminados">
+                <thead>
+   <tr>
                     <th class="Titulo">
                         CODIGO
                     </th>
@@ -175,6 +176,7 @@
                         OPCION
                     </th>
                 </tr>
+                </thead>
                 
                 <% 
                     ArrayList<Producto> lista = Producto_DB.obtenerProductosInhabilitados();
@@ -205,7 +207,9 @@
                         <%=P.getEstadoP() %>
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnRecuperar" id="btnRecuperar" class="button" value="Recuperar" onclick="location.href='Servlet_Prod?codigoP=<%=P.getCodigoP() %>&&accion=recuperar'">
+                        <button type="button" name="btnRecuperar" id="btnRecuperar" 
+                                class="btn btn-secondary waves-light waves-effect"
+                                onclick="location.href='Servlet_Prod?codigoP=<%=P.getCodigoP() %>&&accion=recuperar'">Recuperar</button>
                     </td>
                 </tr>
                 

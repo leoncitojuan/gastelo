@@ -154,7 +154,8 @@
         
         <form id="frmMostrarCuerpoVenta">
             <table class="table" id="tablaMostrarCuerpoVenta">
-                <tr>
+                <thead>
+          <tr>
                     <th class="Titulo">
                         CODIGO
                     </th>
@@ -171,8 +172,9 @@
                         OPCION
                     </th>
                 </tr>    
-                
-                <%
+                </thead>
+                <tbody>
+              <%
                     DecimalFormat df = new DecimalFormat("0.00");
                     DecimalFormatSymbols dfs = df.getDecimalFormatSymbols();
                     dfs.setDecimalSeparator('.');
@@ -197,10 +199,14 @@
                         <%=v.getFecha() %>
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnDetalle" id="btnDetalle" class="button" value="Detalle venta" onclick="location.href='Servlet_Venta?codigoV=<%=v.getCodigoVenta() %>&&cliente=<%=v.getCliente() %>&&importe=<%=v.getTotal() %>&&FechaV=<%=v.getFecha() %>&&codigoCli=<%=v.getCodigoCliente() %>&&accion=MostrarDetalle'">
+                        <button type="button" name="btnDetalle" id="btnDetalle" class="btn btn-info waves-light waves-effect"
+                                onclick="location.href='Servlet_Venta?codigoV=<%=v.getCodigoVenta() %>&&cliente=<%=v.getCliente() %>&&importe=<%=v.getTotal() %>&&FechaV=<%=v.getFecha() %>&&codigoCli=<%=v.getCodigoCliente() %>&&accion=MostrarDetalle'"
+                                >Detalle venta</button>
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnEliminar" id="btnEliminar" class="button" value="Eliminar" onclick="location.href='Servlet_Venta?codigoV=<%=v.getCodigoVenta() %>&&accion=EliminarVenta'"> 
+                        <button type="button" name="btnEliminar" id="btnEliminar" 
+                                class="btn btn-danger waves-light waves-effect"
+                        onclick="location.href='Servlet_Venta?codigoV=<%=v.getCodigoVenta() %>&&accion=EliminarVenta'">Eliminar</button>
                     </td>
                 </tr>
                 
@@ -208,6 +214,7 @@
                     }
                 %>
 
+                </tbody>
             </table>
         </form>
      

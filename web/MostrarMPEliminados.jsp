@@ -147,8 +147,9 @@
         <hr>
         
         <form id="frmMostrarCuerpoMPEliminados">
-            <table id="tablaMostrarCuerpoMPEliminados">
-                <tr>
+            <table class="table" id="tablaMostrarCuerpoMPEliminados">
+                <thead>
+                                    <tr>
                     <th class="Titulo">
                         CODIGO
                     </th>
@@ -162,8 +163,9 @@
                         OPCION
                     </th>
                 </tr>
-                
-                <%
+                </thead>
+                <tbody>
+               <%
                     ArrayList<MarcaP> lista = MarcaP_DB.obtenerMPInhabilitados();
                     for(int i=0; i<lista.size(); i++){
                         MarcaP MP = lista.get(i);
@@ -180,13 +182,17 @@
                         <%=MP.getEstadoMP() %>
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnRecuperar" id="btnRecuperar" class="button" value="Recuperar" onclick="location.href='Servlet_MP?codigoMP=<%=MP.getCodigoMP() %>&&accion=recuperar'">
-                    </td>
+                        <button type="button" name="btnRecuperar"  id="btnRecuperar" class="btn btn-secondary waves-light waves-effect"
+                                 onclick="location.href='Servlet_MP?codigoMP=<%=MP.getCodigoMP() %>&&accion=recuperar'"
+                        >Recuperar</button>
+                     </td>
                 </tr>
                 
                 <%
                     }
                 %>
+                </tbody>
+  
     
             </table>
         </form>

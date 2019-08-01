@@ -142,10 +142,8 @@
                                 </h5>
                                 <p class="card-text codigo">CS5280.</p>
                                 <p class="card-text precio"> S/ <%=p.getPrecioP() %></p>
-                                
-                            <input type="button" class="BotonModificar" name="btnModificar" value="Modificar" onclick="location.href='ModificarProducto.jsp?codigoP=<%=p.getCodigoP() %>'">
-                            <input type="button" class="BotonADD" name="btnADD" value="ADD Carrito" onclick="location.href='AnadirCarrito.jsp?codigoP=<%=p.getCodigoP()%>&&cliente=<%=cliente %>'"><br>
-                            
+                                <button type="button"  name="btnModificar" class="btn btn-warning waves-light waves-effect BotonModificar" onclick="location.href='ModificarProducto.jsp?codigoP=<%=p.getCodigoP() %>'">Modificar</button>
+                                <button type="button"  name="btnADD"  class="btn btn-success waves-light waves-effect BotonADD"  onclick="location.href='AnadirCarrito.jsp?codigoP=<%=p.getCodigoP()%>&&cliente=<%=cliente %>'">add Carrito</button>
                             </div>
                         </div>
 

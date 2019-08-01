@@ -109,11 +109,7 @@
                     <div class="col-sm-12">
                         <div class="page-title-box">
                             <div class="btn-group pull-right">
-                                <ol class="breadcrumb hide-phone p-0 m-0">
-                                    <li class="breadcrumb-item"><a href="#">Highdmin</a></li>
-                                    <li class="breadcrumb-item"><a href="#">UI Kit</a></li>
-                                    <li class="breadcrumb-item active">Cards</li>
-                                </ol>
+                      
                             </div>
                             <h4 class="page-title"> <h4>
                                       
@@ -148,8 +144,9 @@
         <hr>    
         
         <form id="frmMostrarCuerpoCPEliminados">
-            <table id="tablaMostrarCuerpoCPEliminados">
-                <tr>
+            <table  class="table" id="tablaMostrarCuerpoCPEliminados">
+                <thead>
+                             <tr>
                     <th class="Titulo">
                         CODIGO
                     </th>
@@ -163,8 +160,9 @@
                         OPCION
                     </th>
                 </tr>
-                
-                <%
+                </thead>
+                <tbody>
+                                   <%
                     ArrayList<ClaseP> lista = ClaseP_DB.obtenerCPInhabilitados();
                     for(int i=0; i<lista.size(); i++){
                         ClaseP CP = lista.get(i);
@@ -188,6 +186,8 @@
                 <%
                     }
                 %>
+                </tbody>
+ 
             </table>
         </form>  
                             <!-- end row -->

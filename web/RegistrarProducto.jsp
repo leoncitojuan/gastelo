@@ -112,15 +112,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="page-title-box">
-                            <div class="btn-group pull-right">
-                                <ol class="breadcrumb hide-phone p-0 m-0">
-                                    <li class="breadcrumb-item"><a href="#">Highdmin</a></li>
-                                    <li class="breadcrumb-item"><a href="#">UI Kit</a></li>
-                                    <li class="breadcrumb-item active">Cards</li>
-                                </ol>
-                            </div>
-                            <h4 class="page-title"> <h4>
-                                      
+                             <h4 class="page-title"> <h4>                                     
                                                  <td colspan="5">
                             <h1>Bienvenido  </h1>
                             
@@ -133,79 +125,56 @@
                <div class="row">
                     <div class="col-12">
                         <div class="card-box">
+                                <h1> Registrar producto  </h1>
+                            <form name="frm" action="Servlet_Prod" method="post" id="frmRegistrarProd">
+                                <div class="form-group row">
+                                    <label class="col-2 col-form-label">  Codigo :</label>
+                                    <div class="col-10">
+                                        <input type="text" class="form-control" 
+                                               type="text" name="txtCodigo" value="<%=Codigo_P %>" 
+                                               readonly="readonly"/>
+                                    </div>
+                                </div>
+                                 <div class="form-group row">
+                                    <label class="col-2 col-form-label"> Clase producto :</label>
+                                    <div class="col-10">
+                                        <input type="text" class="form-control" 
+                                               name="txtClase" id="txtClase"/>
+                                    </div>
+                                </div>
+                                 <div class="form-group row">
+                                    <label class="col-2 col-form-label">  Marca producto :</label>
+                                    <div class="col-10">
+                                        <input type="text" class="form-control" 
+                                              name="txtMarca" id="txtMarca"/>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-2 col-form-label">Descripcion :</label>
+                                    <div class="col-10">
+                                        <input type="text" class="form-control" 
+                                               name="txtDescripcion" id="txtDescripcion" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-2 col-form-label">Precio :</label>
+                                    <div class="col-10">
+                                        <input type="text" class="form-control" 
+                                                name="txtPrecio" id="txtPrecio"  />
+                                    </div>
+                                </div>
+                                 <div class="form-group row">
+                                    <label class="col-2 col-form-label"> Imagen :</label>
+                                    <div class="col-10">
+                                        <input type="file" name="txtImagen" size="30" id="txtImagen" class="form-control"
+                                         />
+                                    </div>
+                                </div>
+                              <button type="button" name="btnCancelar" id="btnCancelar" class="btn btn-danger waves-light waves-effect">Cancelar</button>
+                              <button type="button" name="btnRegistrar" id="btnRegistrar" class="button btn btn-success waves-light waves-effect">Registrar</button>
+                            <input type="hidden" name="accion" value="insertar">
+                            </form>
 
-        <form name="frm" action="Servlet_Prod" method="post" id="frmRegistrarProd">
-            <table id="tablaRegistrarProd">
-                <tr>
-                    <th colspan="2">
-                        <h1> Registrar producto  </h1>
-                    </th>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Codigo :
-                    </td>
-                    <td>
-                        <dd> <input class="form-control" type="text" name="txtCodigo" value="<%=Codigo_P %>" 
-                                    readonly="readonly"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Clase producto :
-                    </td>
-                    <td>
-                        <dd> <input  class="form-control" type="text" name="txtClase" id="txtClase" class="textBox"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Marca producto :
-                    </td>
-                    <td>
-                        <dd> <input type="text" class="form-control textBox" name="txtMarca" id="txtMarca" /> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Descripcion :
-                    </td>
-                    <td>
-                        <dd> <input type="text" name="txtDescripcion" id="txtDescripcion" class="form-control textBox"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Precio :
-                    </td>
-                    <td>
-                        <dd> <input type="text" name="txtPrecio" id="txtPrecio" class="form-control textBox"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Imagen :
-                    </td>
-                    <td>
-                        <dd> <input type="file" name="txtImagen" size="30" id="txtImagen" class="form-control textBox"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="Botones">
-                        <br>
-                        <br>
-                        <button type="button" name="btnCancelar" id="btnCancelar" class="btn btn-danger waves-light waves-effect">Cancelar</button>
-                        <button type="button" name="btnRegistrar" id="btnRegistrar" class="button btn btn-success waves-light waves-effect">Registrar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <br>
-                    </td>
-                </tr>
-            </table>
-                    <input type="hidden" name="accion" value="insertar">
-        </form>
                             <!-- end row -->
                         </div> <!-- end card-box -->
                     </div><!-- end col -->
