@@ -21,7 +21,22 @@
         <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
         <link type="text/css" rel="stylesheet" href="css/css1.css" />
         <script src="assets/js/modernizr.min.js"></script>
-
+        <style>
+            .imgcatalogo{
+                width: 300px;
+                height:  200px !important;
+                max-height:  200px !important;
+                min-height:  200px !important;
+            }
+            @media (max-width: 600px) {
+                .imgcatalogo{
+                     width: 100%;
+                     height:  200px !important;
+                     max-height:  200px !important;
+                     min-height:  200px !important;
+                 }
+            }
+        </style>
     </head>
 
     <body  onload="cargar()">
@@ -69,7 +84,7 @@
                     <div class="col-md-6 col-lg-3">
                         <!-- Simple card -->
                         <div class="card m-b-30">
-                            <img class="card-img-top img-fluid" src="Imagen/<%=p.getImagenP() %>" alt="Card image cap">
+                            <img class="card-img-top img-fluid imgcatalogo" src="Imagen/<%=p.getImagenP() %>" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">
                                      <%=p.getClaseProducto()%> <%=p.getMarcaProducto()%> <br>
