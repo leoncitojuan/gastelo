@@ -189,9 +189,10 @@
                 <tr>
                     <td colspan="3" class="Botones">
                         <br>
-                        <input type="button" name="btnCancelar" id="btnCancelar" class="button" value="Cancelar">
-                        <input type="button" name="btnModificar" id="btnModificar" class="button" value="Modificar">
-                        <input type="button" name="btnGuardar" id="btnGuardar" class="campoOculto" value="Guardar">
+           
+                       <button type="button"  name="btnCancelar" id="btnCancelar"  class="btn btn-danger waves-light waves-effect">Cancelar</button>
+                        <button type="button" name="btnModificar" id="btnModificar"  class="btn btn-success waves-light waves-effect">Modificar</button>
+                        <button type="button" name="btnGuardar" id="btnGuardar" class="campoOculto btn btn-success waves-light waves-effect">Guardar</button>
                     </td>
                 </tr>
                 <tr>
