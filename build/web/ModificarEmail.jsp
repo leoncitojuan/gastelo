@@ -155,66 +155,45 @@
        <%
          cliente = request.getParameter("cliente");
         Producto p = Producto_DB.listarProductoPorCodigo(request.getParameter("codigoP"));
-    %>                       
+    %>
+
         <form action="Servlet_Usu" method="post" id="frmModificarEmail">
-            <table id="tablaModificarEmail">
-                <tr>
-                    <th colspan="2">
-                        <h1>Cambiar E-mail</h1>
-                    </th>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="hidden" name="txtCodigo" value="<%=usu.getCodigoUsuario() %>">
-                        <input type="hidden" name="txtCaracter" value="<%=usu.getClaveUsuario() %>">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Correo actual : 
-                    </td>
-                    <td>
-                        <dd> <%=usu.getEmailUsuario() %> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Ingrese nuevo Email : 
-                    </td>
-                    <td>
-                        <dd> <input type="text" name="txtEmail" id="txtEmail" class="textBox" size="30" maxlength="50"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Confirmar su Email :
-                    </td>
-                    <td>
-                        <dd> <input type="text" name="txtConfirmarEmail" id="txtConfirEmail" class="textBox" size="30" maxlength="50"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Ingrese su contraseña :
-                    </td>
-                    <td>
-                        <dd> <input type="password" name="txtPass" id="txtPass" class="textBox" size="30" maxlength="50"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="Botones">
-                        <br>
-                        <input type="button" name="btnCancelar" id="btnCancelar" class="button" value="Cancelar">
-                        <input type="button" name="btnGuardar" id="btnGuardar" class="button" value="Guardar">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <br>
-                    </td>
-                </tr>
-            </table>
-                    <input type="hidden" name="accion" value="modificarEmail">
+              <h1>Cambiar E-mail</h1>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label" for="example-email">Cambiar E-mail :</label>
+                         <div class="col-10">
+                          <input type="hidden" name="txtCodigo" value="<%=usu.getCodigoUsuario() %>">
+                          <input type="hidden" name="txtCaracter" value="<%=usu.getClaveUsuario() %>">
+                         </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label" for="example-email">correo actual:</label>
+                         <div class="col-10">
+                          <dd> <%=usu.getEmailUsuario() %> </dd>
+                         </div>
+                </div>
+               <div class="form-group row">
+                    <label class="col-2 col-form-label" for="example-email"> Ingrese nuevo Email : </label>
+                         <div class="col-10">
+                        <input type="text" name="txtEmail" id="txtEmail" class="form-control" size="30" maxlength="50">
+                         </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label" for="example-email"> Confirmar Email : </label>
+                         <div class="col-10">
+                             <input type="text" name="txtConfirmarEmail" id="txtConfirEmail" class="form-control" size="30" maxlength="50"> 
+                         </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label" for="example-email"> Ingrese su contraseña : </label>
+                         <div class="col-10">
+                           <input  class="form-control" type="password" name="txtPass" id="txtPass" class="textBox" size="30" maxlength="50"> 
+                         </div>
+                </div>
+                 
+            <button type="button" name="btnCancelar" id="btnCancelar" class="btn btn-danger waves-light waves-effect" >Cancelar</button>
+            <button type="button" name="btnGuardar" id="btnGuardar" class="btn btn-success waves-light waves-effect">Guardar</button>
+            <input type="hidden" name="accion" value="modificarEmail">
         </form>
                             <!-- end row -->
                         </div> <!-- end card-box -->

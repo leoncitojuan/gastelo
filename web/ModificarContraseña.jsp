@@ -31,81 +31,9 @@
  
     <body >
 
-        <!-- Navigation Bar-->
-        <header id="topnav">
-            <div class="topbar-main">
-                <div class="container-fluid">
-
-                    <!-- Logo container-->
-                    <div class="logo">
-                        <!-- Text Logo -->
-                        <!-- <a href="index.html" class="logo">
-                            <span class="logo-small"><i class="mdi mdi-radar"></i></span>
-                            <span class="logo-large"><i class="mdi mdi-radar"></i> Highdmin</span>
-                        </a> -->
-                        <!-- Image Logo -->
-                        <a href="index.html" class="logo">
-                            <img src="assets/images/logo_sm.png" alt="" height="26" class="logo-small">
-                            <img src="assets/images/logo.png" alt="" height="22" class="logo-large">
-
-                        </a>
-
-                    </div>
-                    <!-- End Logo container-->
-
-
-                    <!-- end menu-extras -->
-
-                    <div class="clearfix"></div>
-
-                </div> <!-- end container -->
-            </div>
-            <!-- end topbar-main -->
-                  <%
-            String codigo = (String)session.getAttribute("parametroCodigo");
-            
-             usu = Usuario_DB.listarUsuarioPorCodigo(codigo);
-            String cliente = usu.getNombreUsuario() + ", " + usu.getApellidosUsuario();
-        %>
-          <form action="Servlet_Usu" method="post" id="frmCabecera">
-                          <div class="navbar-custom">
-                    <div class="container-fluid">
-                        <div id="navigation">
-                            <!-- Navigation Menu-->
-                            <ul class="navigation-menu">
-    
-                                <li class="has-submenu">
-                                    <a href="RegistrarVenta.jsp" class="link" id="lnkCompra"><i class="icon-speedometer"></i>Mis compras</a>
-                                </li>
-    
-                                <li class="has-submenu">
-                                        <a href="MiPerfil.jsp?codigoU=<%=cliente %>" class="link"
-                                        id="lnkPerfil"></i>Mis cuenta</a>
-                                    </li>
-                                    
-                                <li class="has-submenu">
-                                        <a href="CuentaAdministrador.jsp" class="link" id="lnkAdm"><i class="icon-speedometer"></i>Administrar</a>
-                                    </li>
-                                    
-                                <li class="has-submenu">
-                                        <a href="Login.jsp" class="link" id="lnkLogin"><i class="icon-speedometer"></i>Login</a>
-                                    </li>
-                                     <li class="has-submenu">
-                                        <a href="Servlet_Usu?accion=logout" class="link" id="lnkLogout"><i class="icon-speedometer"></i>Salir</a>
-                                    </li>
-    
-                            </ul>
-                            <!-- End navigation menu -->
-                        </div> <!-- end #navigation -->
-                    </div> <!-- end container -->
-                </div>  <!-- end navbar-custom -->
-            <input type="hidden" value="<%=usu.getTipoUsuario() %>" name="txtTipo" id="txtTipo">
-            <input type="hidden" name="accion" value="logout">
-        </form>
-
-        </header>
+      <jsp:include page="menu.jsp" />
         <!-- End Navigation Bar-->
-
+   
 
         <div class="wrapper">
             <div class="container-fluid">
@@ -136,57 +64,31 @@
                     <div class="col-12">
                         <div class="card-box">
      <form action="Servlet_Usu" method="post" id="frmModificarClave">
-            <table id="tablaModificarClave">
-                <tr>
-                    <th colspan="2">
-                        <h1>Cambiar contrase&ntildea</h1>
-                    </th>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="hidden" name="txtCodigo" value="<%=usu.getCodigoUsuario() %>">
-                        <input type="hidden" name="txtCaracter" value="<%=usu.getClaveUsuario() %>">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Ingrese su contrase&ntildea actual : 
-                    </td>
-                    <td>
-                        <dd> <input type="password" name="txtClaveActual" id="txtClaveActual" class="textBox" size="20" maxlength="20"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Ingrese nueva contrase&ntildea : 
-                    </td>
-                    <td>
-                        <dd> <input type="password" name="txtClave" id="txtClave" class="textBox" size="20" maxlength="20"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Confirmar su contrase&ntildea :
-                    </td>
-                    <td>
-                        <dd> <input type="password" name="txtConfirmarClave" id="txtConfirClave" class="textBox" size="20" maxlength="20"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="Botones">
-                        <br>
-                        <input type="button" name="btnCancelar" id="btnCancelar" class="button" value="Cancelar">
-                        <input type="button" name="btnGuardar" id="btnGuardar" class="button" value="Guardar">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <br>
-                    </td>
-                </tr>
-            </table>
-                    <input type="hidden" name="accion" value="modificarClave">
-        </form>
+          <h1>Cambiar contrase&ntildea</h1>
+         <input type="hidden" name="txtCodigo" value="<%=usu.getCodigoUsuario() %>">
+         <input type="hidden" name="txtCaracter" value="<%=usu.getClaveUsuario() %>">
+         <div class="form-group row">
+             <label class="col-2 col-form-label" for="example-email"> Ingrese su contraseña : </label>
+                  <div class="col-10">
+                       <input type="password" name="txtClaveActual" id="txtClaveActual" class="form-control" size="20" maxlength="20"> 
+                  </div>
+         </div>
+         <div class="form-group row">
+             <label class="col-2 col-form-label" for="example-email">Ingrese nueva contraseña : </label>
+                  <div class="col-10">
+                       <input type="password" class="form-control" name="txtClave" id="txtClave" class="textBox" size="20" maxlength="20"> 
+                  </div>
+         </div>
+         <div class="form-group row">
+             <label class="col-2 col-form-label" for="example-email">Confirmar su contraseña : </label>
+                  <div class="col-10">
+                      <input type="password" class="form-control" name="txtConfirmarClave" id="txtConfirClave" class="textBox" size="20" maxlength="20"> 
+                  </div>
+         </div>
+    <button type="button" name="btnCancelar" id="btnCancelar" class="btn btn-danger waves-light waves-effect">Cancelar</button>
+    <button type="button" name="btnGuardar" id="btnGuardar" class="btn btn-success waves-light waves-effect" >Guardar</button>
+         <input type="hidden" name="accion" value="modificarClave">   
+   </form>
                             <!-- end row -->
                         </div> <!-- end card-box -->
                     </div><!-- end col -->

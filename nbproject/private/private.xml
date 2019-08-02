@@ -3,8 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/src/java/Conexion/Conexion.java</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/mensaje.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/MostrarProductosEliminados.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/RegistrarVenta.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/MiPerfil.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/ModificarCP.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/MostrarMP.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/MostrarCPEliminados.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/MostrarMPEliminados.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/MostrarDetalleVenta.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/MostrarProducto.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/MostrarUsuario.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/MostrarUsuarioEliminado.jsp</file>
             <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/AnadirCarrito.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/ModificarEmail.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/Catalogo.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/ModificarProducto.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/mensaje2.jsp</file>
+            <file>file:/C:/Users/usuario/Documents/gastelo/gastelojavaserver-master/gastelojavaserver-master/WebApplication1/web/Login.jsp</file>
         </group>
     </open-files>
 </project-private>

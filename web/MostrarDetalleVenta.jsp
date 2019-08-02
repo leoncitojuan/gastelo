@@ -103,7 +103,7 @@
             <input type="hidden" name="accion" value="logout">
         </form>
         </header>
-     
+   
         <div class="wrapper">
             <div class="container-fluid">
 

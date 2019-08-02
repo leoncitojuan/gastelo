@@ -26,56 +26,14 @@
     </head>
     
     <body>
-        <header id="topnav">
-            <div class="topbar-main">
-                <div class="container-fluid">
-
-                    <!-- Logo container-->
-                    <div class="logo">
-                        <!-- Text Logo -->
-                        <!-- <a href="index.html" class="logo">
-                            <span class="logo-small"><i class="mdi mdi-radar"></i></span>
-                            <span class="logo-large"><i class="mdi mdi-radar"></i> Highdmin</span>
-                        </a> -->
-                        <!-- Image Logo -->
-                        <a href="index.html" class="logo">
-                            <img src="assets/images/logo_sm.png" alt="" height="26" class="logo-small">
-                            <img src="assets/images/logo.png" alt="" height="22" class="logo-large">
-
-                        </a>
-
-                    </div>
-                    <!-- End Logo container-->
-
-
-                    <!-- end menu-extras -->
-
-                    <div class="clearfix"></div>
-
-                </div> <!-- end container -->
-            </div>
-            <!-- end topbar-main -->
-                  <%
+     <jsp:include page="menu.jsp" />
+        <!-- End Navigation Bar-->
+         <%
             String codigo = (String)session.getAttribute("parametroCodigo");
             
             Usuario usu = Usuario_DB.listarUsuarioPorCodigo(codigo);
             String cliente = usu.getNombreUsuario() + ", " + usu.getApellidosUsuario();
         %>
-          <form action="Servlet_Usu" method="post" id="frmCabecera">
-                          <div class="navbar-custom">
-                    <div class="container-fluid">
-                        <div id="navigation">
-                            <!-- Navigation Menu-->
-                            <!-- End navigation menu -->
-                        </div> <!-- end #navigation -->
-                    </div> <!-- end container -->
-                </div>  <!-- end navbar-custom -->
-            <input type="hidden" value="<%=usu.getTipoUsuario() %>" name="txtTipo" id="txtTipo">
-            <input type="hidden" name="accion" value="logout">
-        </form>
-
-        </header>
- 
         <div class="wrapper">
             <div class="container-fluid">
                <div class="row">
